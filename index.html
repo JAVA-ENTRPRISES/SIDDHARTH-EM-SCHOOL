@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddhart EM School | Learn, Lead, Grow</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-home {
+            background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 40%, #ffffff 100%);
+            color: #1b2332;
+        }
+        .neo-home-hero {
+            padding: 9rem 0 4.5rem;
+            background:
+                radial-gradient(900px 320px at 15% 8%, rgba(110, 86, 207, 0.25), transparent 62%),
+                radial-gradient(700px 250px at 90% 15%, rgba(0, 182, 204, 0.22), transparent 60%),
+                linear-gradient(130deg, #10172c 0%, #1f2b52 48%, #1c355e 100%);
+            color: #f5f8ff;
+            position: relative;
+            overflow: hidden;
+        }
+        .neo-kicker {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.32);
+            border-radius: 999px;
+            padding: 0.35rem 0.95rem;
+            font-size: 0.82rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .neo-hero-title {
+            margin-top: 1.1rem;
+            font-size: clamp(2.15rem, 5vw, 4rem);
+            line-height: 1.14;
+            font-weight: 800;
+        }
+        .neo-hero-sub {
+            max-width: 580px;
+            color: rgba(245, 248, 255, 0.86);
+            font-size: 1.02rem;
+            margin: 1.15rem 0 1.8rem;
+        }
+        .neo-cta-light {
+            background: #ffffff;
+            color: #17213c;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            padding: 0.72rem 1.45rem;
+        }
+        .neo-cta-outline {
+            border: 1px solid rgba(255, 255, 255, 0.65);
+            color: #ffffff;
+            border-radius: 12px;
+            font-weight: 600;
+            padding: 0.72rem 1.45rem;
+        }
+        .neo-hero-panel {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 26px;
+            padding: 1.6rem;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+        }
+        .neo-hero-panel h3 {
+            font-size: 1.12rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .neo-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: rgba(245, 248, 255, 0.92);
+        }
+        .neo-point i {
+            color: #5ce6ff;
+        }
+        .neo-metric-wrap {
+            margin-top: -2.2rem;
+            position: relative;
+            z-index: 2;
+        }
+        .neo-metric-card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 14px 35px rgba(18, 27, 53, 0.12);
+            border: 1px solid rgba(17, 24, 39, 0.08);
+            text-align: center;
+            padding: 1.15rem 0.8rem;
+            height: 100%;
+        }
+        .neo-metric-card strong {
+            font-size: 1.35rem;
+            color: #1a2b57;
+            display: block;
+        }
+        .neo-metric-card span {
+            font-size: 0.84rem;
+            color: #60708f;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .neo-section {
+            padding: 4.4rem 0;
+        }
+        .neo-section-tag {
+            color: #5b4fda;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+        .neo-section h2 {
+            font-weight: 800;
+            color: #1a2647;
+            margin-top: 0.4rem;
+            margin-bottom: 0.95rem;
+        }
+        .neo-lead {
+            color: #52607f;
+            max-width: 740px;
+        }
+        .neo-about-card {
+            background: #ffffff;
+            border: 1px solid rgba(26, 38, 71, 0.08);
+            border-radius: 18px;
+            padding: 1.45rem 1.35rem;
+            box-shadow: 0 10px 25px rgba(16, 23, 44, 0.08);
+            height: 100%;
+        }
+        .neo-about-card i {
+            font-size: 1.25rem;
+            color: #5b4fda;
+        }
+        .neo-about-card h4 {
+            font-size: 1.05rem;
+            margin-top: 0.75rem;
+            font-weight: 700;
+        }
+        .neo-program {
+            border-radius: 20px;
+            padding: 1.5rem;
+            color: #f2f7ff;
+            height: 100%;
+            box-shadow: 0 15px 30px rgba(11, 17, 33, 0.2);
+        }
+        .neo-program h4 {
+            font-size: 1.1rem;
+            margin: 0.8rem 0 0.4rem;
+            font-weight: 700;
+        }
+        .neo-program p {
+            color: rgba(242, 247, 255, 0.88);
+            margin-bottom: 0;
+            font-size: 0.94rem;
+        }
+        .neo-pri { background: linear-gradient(140deg, #3f4adf 0%, #6158ff 100%); }
+        .neo-sec { background: linear-gradient(140deg, #0088b0 0%, #00b7a9 100%); }
+        .neo-hs { background: linear-gradient(140deg, #903fbe 0%, #d359a8 100%); }
+        .neo-life-card {
+            background: #ffffff;
+            border: 1px solid rgba(26, 38, 71, 0.08);
+            border-radius: 18px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 12px 26px rgba(16, 23, 44, 0.08);
+        }
+        .neo-life-thumb {
+            height: 150px;
+            background: linear-gradient(135deg, #d7e5ff 0%, #f8fbff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #3555b3;
+        }
+        .neo-life-body {
+            padding: 1.1rem 1rem 1.2rem;
+        }
+        .neo-life-body h5 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+        .neo-life-body p {
+            margin: 0;
+            color: #566584;
+            font-size: 0.9rem;
+        }
+        .neo-admission {
+            background: linear-gradient(180deg, #f2f5ff 0%, #ffffff 100%);
+            border-radius: 24px;
+            padding: 2rem 1.6rem;
+            border: 1px solid rgba(26, 38, 71, 0.08);
+        }
+        .neo-step {
+            display: flex;
+            gap: 0.9rem;
+            margin-bottom: 0.95rem;
+        }
+        .neo-step span {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #5b4fda;
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .neo-quote {
+            background: #1f2b52;
+            color: #eef5ff;
+            border-radius: 20px;
+            padding: 2rem;
+            height: 100%;
+        }
+        .neo-quote p {
+            color: rgba(238, 245, 255, 0.9);
+            margin-bottom: 0;
+        }
+        .neo-final-cta {
+            text-align: center;
+            background: linear-gradient(135deg, #253a78 0%, #2f5094 55%, #00a6bf 100%);
+            border-radius: 24px;
+            color: #f6fbff;
+            padding: 2.3rem 1.3rem;
+            box-shadow: 0 22px 45px rgba(24, 45, 96, 0.28);
+        }
+        .neo-final-cta h3 {
+            font-weight: 800;
+            margin-bottom: 0.6rem;
+        }
+        .neo-final-cta p {
+            color: rgba(246, 251, 255, 0.88);
+            margin-bottom: 1.2rem;
+        }
+    </style>
+</head>
+<body class="page-home">
+    <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Auth Panel placeholder -->
+    <div id="authpanel-placeholder"></div>
+
+    <section id="home" class="neo-home-hero">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                    <span class="neo-kicker">Siddhart EM School • Baripada</span>
+                    <h1 class="neo-hero-title">A New-Age Campus for Confident, Curious Learners</h1>
+                    <p class="neo-hero-sub">
+                        We combine strong academic foundations with modern skills, sports culture, and value-based mentoring to help every child thrive in school and beyond.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="admission.html" class="btn neo-cta-light">Start Admission</a>
+                        <a href="#about" class="btn neo-cta-outline">Explore Our Campus</a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="neo-hero-panel">
+                        <h3>Why families choose us</h3>
+                        <div class="neo-point"><i class="bi bi-check2-circle"></i> Structured classrooms with interactive teaching tools</div>
+                        <div class="neo-point"><i class="bi bi-check2-circle"></i> Dedicated support in language, math, and science</div>
+                        <div class="neo-point"><i class="bi bi-check2-circle"></i> Daily focus on discipline, communication, and confidence</div>
+                        <div class="neo-point mb-0"><i class="bi bi-check2-circle"></i> Equal encouragement for academics, sports, and arts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container neo-metric-wrap">
+        <div class="row g-3">
+            <div class="col-md-3 col-6">
+                <div class="neo-metric-card"><strong>20+</strong><span>Experienced Staff</span></div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="neo-metric-card"><strong>12</strong><span>Smart Classrooms</span></div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="neo-metric-card"><strong>6+</strong><span>Activity Clubs</span></div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="neo-metric-card"><strong>100%</strong><span>Care & Guidance</span></div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="neo-section">
+        <div class="container">
+            <span class="neo-section-tag">About Our School</span>
+            <h2>A completely refreshed learning experience</h2>
+            <p class="neo-lead mb-4">
+                Siddhart EM School is designed as a student-first learning space where teaching is practical, routines are strong, and every child receives personal attention for growth in academics and life skills.
+            </p>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="neo-about-card">
+                        <i class="bi bi-mortarboard-fill"></i>
+                        <h4>Academic Excellence</h4>
+                        <p>Clear concepts, regular practice sheets, and weekly review plans to keep progress steady across all classes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="neo-about-card">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                        <h4>Skill-Based Learning</h4>
+                        <p>Public speaking, teamwork, creativity, and digital awareness are integrated with everyday classroom learning.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="neo-about-card">
+                        <i class="bi bi-heart-fill"></i>
+                        <h4>Value & Character</h4>
+                        <p>We build respect, responsibility, and empathy through mentoring, discipline routines, and community engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="neo-section pt-0">
+        <div class="container">
+            <span class="neo-section-tag">Academic Pathways</span>
+            <h2>Programs for each stage of growth</h2>
+            <div class="row g-4 mt-1">
+                <div class="col-lg-4">
+                    <div class="neo-program neo-pri">
+                        <i class="bi bi-balloon-heart fs-3"></i>
+                        <h4>Primary Wing</h4>
+                        <p>Activity-led foundation in reading, numeracy, and expression with joyful learning methods.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="neo-program neo-sec">
+                        <i class="bi bi-journal-richtext fs-3"></i>
+                        <h4>Middle School</h4>
+                        <p>Concept clarity, project work, and applied learning for stronger subject understanding.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="neo-program neo-hs">
+                        <i class="bi bi-graph-up-arrow fs-3"></i>
+                        <h4>Senior Classes</h4>
+                        <p>Focused board preparation, career awareness, and exam strategy through personalized guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="neo-section pt-0">
+        <div class="container">
+            <span class="neo-section-tag">Campus Life</span>
+            <h2>Learning beyond textbooks</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="neo-life-card">
+                        <div class="neo-life-thumb"><i class="bi bi-trophy-fill"></i></div>
+                        <div class="neo-life-body">
+                            <h5>Sports Arena</h5>
+                            <p>Regular physical training and team games that boost fitness and discipline.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="neo-life-card">
+                        <div class="neo-life-thumb"><i class="bi bi-brush-fill"></i></div>
+                        <div class="neo-life-body">
+                            <h5>Art & Culture</h5>
+                            <p>Music, dance, and art activities to nurture confidence and creative expression.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="neo-life-card">
+                        <div class="neo-life-thumb"><i class="bi bi-flask-fill"></i></div>
+                        <div class="neo-life-body">
+                            <h5>Science Practice</h5>
+                            <p>Simple experiments and hands-on demonstrations for real conceptual learning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="neo-life-card">
+                        <div class="neo-life-thumb"><i class="bi bi-mic-fill"></i></div>
+                        <div class="neo-life-body">
+                            <h5>Public Speaking</h5>
+                            <p>Stage activities and class discussions to improve communication and leadership.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="neo-section pt-0">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6">
+                    <div class="neo-admission">
+                        <span class="neo-section-tag">Admissions 2026-27</span>
+                        <h2 class="mb-3">Simple 4-step admission process</h2>
+                        <div class="neo-step"><span>1</span><div><strong>Visit Campus</strong><p class="mb-0">Interact with our admission team and explore the facilities.</p></div></div>
+                        <div class="neo-step"><span>2</span><div><strong>Submit Form</strong><p class="mb-0">Complete registration with required student documents.</p></div></div>
+                        <div class="neo-step"><span>3</span><div><strong>Student Interaction</strong><p class="mb-0">A short assessment helps us understand learning level.</p></div></div>
+                        <div class="neo-step mb-0"><span>4</span><div><strong>Confirm Seat</strong><p class="mb-0">Fee payment and onboarding details are shared promptly.</p></div></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="neo-quote d-flex flex-column justify-content-center">
+                        <h3 class="fw-bold mb-3">Parent Voice</h3>
+                        <p class="mb-3">
+                            "The school has changed my child completely. Better confidence, better communication, and much better study habits. Teachers are supportive and always available."
+                        </p>
+                        <p class="mb-0 fw-semibold">- Parent, Siddhart EM School</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="neo-section pt-0">
+        <div class="container">
+            <div class="neo-final-cta">
+                <h3>Build your child’s future with us</h3>
+                <p>Book a counseling session and get complete details about curriculum, facilities, and fee structure.</p>
+                <a href="contact.html" class="btn neo-cta-light">Book a School Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary back-to-top" type="button">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Load Components -->
+    <script src="js/load-components.js"></script>
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
